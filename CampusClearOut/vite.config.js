@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     proxy: {
         '/api': {
-          target: 'http://linserv1.cims.nyu.edu:24453',
+          target: 'http://localhost:3000',
           changeOrigin: true,
           secure: false,      
           ws: true,

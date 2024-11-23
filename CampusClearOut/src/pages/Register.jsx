@@ -21,9 +21,7 @@ export function Register(){
         console.log("Registration data being sent:", registrationData);
         //post the data to backend
         try {
-            // const response = await fetch(`${API}/register`, {
-
-            const response = await fetch(`${API}/api/register`, {
+            const response = await fetch(`/api/register`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
