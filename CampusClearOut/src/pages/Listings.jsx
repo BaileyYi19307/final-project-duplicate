@@ -9,7 +9,7 @@ export function Listings() {
 
   //retrive all the listings
   useEffect(() => {
-    const response = fetch(`api/listings`)
+    const response = fetch(`/api/listings`)
       .then((response) => response.json())
       .then((listingData) => {
         setListings(listingData);
