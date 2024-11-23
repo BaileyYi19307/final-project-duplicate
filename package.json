@@ -27,6 +27,7 @@
     "mongoose": "^8.8.0",
     "react-bootstrap": "^2.10.5",
     "react-router-dom": "^6.28.0",
-    "serve": "^14.2.4"
+    "serve": "^14.2.4",
+    "vite": "^5.4.11"
   }
 }

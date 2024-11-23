@@ -15,7 +15,7 @@ const __dirname = path.dirname(__filename);
 
 app.use(
   cors({
-    origin: ["http://127.0.0.1:5173", "http://localhost:5173"],
+    origin: ['http://linserv1.cims.nyu.edu:24452'],
     credentials: true, 
   })
 );
@@ -36,10 +36,12 @@ app.use((req, res, next) => {
   if (authRequiredPaths.includes(req.path)) {
     if (!req.session.user) {
       return res.status(401).json({ message: "Unauthorized" });
+    }
+    next();
+  } else {
+    next(); // call next() for non-authenticated paths
   }
-  next();
 });
-
 
 
 //post a listing
